@@ -2,17 +2,11 @@
 #include<string.h>
 #include<curl/curl.h>
 
-
-int main(){
+void getHTML(char url[]){
     CURL *curl;
     FILE *fp;
     int result;
-    char url[256];
     char dest[20] = "output.html";
-
-
-    printf("Please enter the URL of the file you'd like to download: ");
-    scanf("%s", url);
     
     fp = fopen(dest, "wb");
 
@@ -30,5 +24,4 @@ int main(){
     fclose(fp);
 
     curl_easy_cleanup(curl);
-    return 0;
 }
