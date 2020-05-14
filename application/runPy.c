@@ -6,13 +6,14 @@
 int main(int argc, char *argv[]){
     FILE *pFile = NULL;
     char name[] = "errorResponse.txt";
-    char *filename = "./errorResponse.txt";
+    char *filename = "errorResponse.txt";
     pFile = fopen(filename, "w+");
     
     char command[] = {"python3 "};
-    strncat(command, argv[1], sizeof(argv[1]));
+    strcat(command, argv[1]);
+    strcat(command, " > ");
     printf("%s\n", command);
-    strncat(command, filename, sizeof(filename));
+    strcat(command, filename);
     printf("%s\n", command);
     int result = system(command);
 
