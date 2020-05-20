@@ -1,4 +1,0 @@
-python3 test.py > 
-python3 test.py > errorResponse.txt
-
----------------------Suggested solutions from Stack overflow---------------------
